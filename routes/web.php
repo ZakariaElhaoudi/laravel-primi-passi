@@ -22,11 +22,10 @@ Route::get('/', function () {
         ['name' => 'Blog', 'route' => 'blog'],
     ];
     return view('home', ['pages'=> $pages]);
-});
+})->name('home');
 
 // Route::get('/', function () {
 //     $hello = "Hello world!!";
 //     return view('home', compact('hello'));
 // });
-
 
