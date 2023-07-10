@@ -13,6 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/examples', function () {
+    return view('examples');
+})->name('examples');
+
+Route::get('/documentation', function () {
+    return view('documentation');
+})->name('documentation');
+
+Route::get('/blog', function () {
+    return view('blog');
+})->name('blog');
+
 Route::get('/', function () {
     $pages = [
         ['name' => 'Home', 'route' => 'home'],
@@ -28,4 +44,5 @@ Route::get('/', function () {
 //     $hello = "Hello world!!";
 //     return view('home', compact('hello'));
 // });
+
 
