@@ -21,12 +21,12 @@ Route::get('/', function () {
         ['name' => 'Documentation', 'route' => 'documentation'],
         ['name' => 'Blog', 'route' => 'blog'],
     ];
-    return view('home', $pages);
+    return view('home', ['pages'=> $pages]);
 });
 
-Route::get('/', function () {
-    $hello = "Hello world!!";
-    return view('home', compact('hello'));
-});
+// Route::get('/', function () {
+//     $hello = "Hello world!!";
+//     return view('home', compact('hello'));
+// });
 
 
