@@ -8,6 +8,11 @@
 <body>
     <header>
         <h1>Homepage</h1>
+        <ul>
+            @foreach ($pages as $page)
+            <li><a href="{{ route($page['route']) }}">{{ $page['name'] }}</a></li>
+            @endforeach
+        </ul>
     </header>
     <main>
         <h2 style="color:red;">{{ $hello }}</h2>

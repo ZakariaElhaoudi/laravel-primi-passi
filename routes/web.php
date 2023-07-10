@@ -14,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $pages = [
+        ['name' => 'Home', 'route' => 'home'],
+        ['name' => 'About', 'route' => 'about'],
+        ['name' => 'Examples', 'route' => 'examples'],
+        ['name' => 'Documentation', 'route' => 'documentation'],
+        ['name' => 'Blog', 'route' => 'blog'],
+    ];
+    return view('home', $pages);
+});
+
+Route::get('/', function () {
     $hello = "Hello world!!";
     return view('home', compact('hello'));
 });
+
+
